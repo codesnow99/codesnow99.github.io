@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url(../img/background.png);
+	background-image: url(https://codesnow99.github.io/img/background.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: Helvetica Neue,
@@ -217,7 +217,6 @@ header {
 	height: inherit;
 	width: 40px;
 	float: right;
-	background-color: 
 }
 
 .post_new>img {
