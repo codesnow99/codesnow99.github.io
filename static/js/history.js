@@ -1,3 +1,24 @@
+// modify page turning previous:
+window.onload = function() {
+	// get the number of page and get how many pages:
+	var numbers = getPageNumber();
+	document.getElementById('pageturning_current').innerHTML = numbers[0].toString();
+	if (numbers[0] != 1) {
+		var previous = document.getElementById('pageturning_previous');
+		previous.innerHTML = '上一页';
+		previous.href = 'https://codesnow99.github.io/history/page'
+		              + ( (numbers[0] - 1).toString() )
+		              + '.html';
+	}
+	if (numbers[1] != numbers[0]) {
+		var next = document.getElementById('pageturning_next');
+		next.innerHTML = '下一页';
+		next.href = 'https://codesnow99.github.io/history/page'
+		          + ( (numbers[0] + 1).toString() )
+		          + '.html';
+	}
+}
+
 // mouse over event for home.
 function over_home() {
 	// change background color of site title.
@@ -60,12 +81,24 @@ function mouseover_post(node) {
 
 // mouseout event of post:
 function mouseout_post(node) {
-	// 统一:
+	// total:
 	var parentNode = node.parentNode;
 	parentNode.children[0].style.backgroundColor = 'rgba(255,255,255,0)';
 	parentNode.children[1].style.backgroundColor = 'rgba(255,255,255,0)';
 	parentNode.children[1].children[0].style.display = 'none';
 
-	// 单独:
+	// alone:
 	node.style.backgroundColor = 'rgba(255,255,255,0)';
+}
+
+// get the number of page and get how many pages:
+function getPageNumber() {
+	var content = document.getElementById('title').innerHTML;
+	var content_sliced = content.slice(5, content.length);
+	var start = content_sliced.indexOf('(');
+	var end   = content_sliced.indexOf(')');
+	var page_number  = parseInt( content_sliced.slice(0, start) );
+	var pages_number = parseInt( content_sliced.slice(start + 1, end) );
+	var numbers = [page_number, pages_number];
+	return numbers;
 }

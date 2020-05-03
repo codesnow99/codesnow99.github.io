@@ -119,9 +119,7 @@ header {
 }
 
 #left_author {
-	position: absolute;
-	left: 0px;
-	top: 0px;
+	margin-bottom: 8px;
 	width: 265px;
 	height: 200px;
 	background-color: rgba(255,255,255,0.4);
@@ -160,6 +158,7 @@ header {
 	cursor: default;
 	transition: 0.8s linear;
 }
+
 .name_underline_hover {
 	position: absolute;
 	top: 75px;
@@ -186,6 +185,59 @@ header {
 	font-size: 20px;
 	color: #fb7299;
 	text-decoration: none;
+}
+
+#pageturning_previous {
+	color: #222222;
+	text-decoration: none;
+	display: block;
+	float: left;
+	margin-right: 8px;
+	border-radius: 10px;
+	width: 83px;
+	height: 83px;
+	line-height: 83px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.4);
+}
+#pageturning_previous:hover {
+	background-color: rgba(255,255,255,0.6);
+	cursor: pointer;
+}
+
+#pageturning_current {
+	color: #222222;
+	text-decoration: none;
+	display: block;
+	float: left;
+	margin-right: 8px;
+	border-radius: 10px;
+	width: 83px;
+	height: 83px;
+	line-height: 83px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.4);
+}
+#pageturning_current:hover {
+	background-color: rgba(255,255,255,0.6);
+	cursor: pointer;
+}
+
+#pageturning_next {
+	color: #222222;
+	text-decoration: none;
+	display: block;
+	float: left;
+	border-radius: 10px;
+	width: 83px;
+	height: 83px;
+	line-height: 83px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.4);
+}
+#pageturning_next:hover {
+	background-color: rgba(255,255,255,0.6);
+	cursor: pointer;
 }
 
 #history_content {
