@@ -5,8 +5,7 @@
 }
 
 body {
-	background-image: url(https://codesnow99.github.io/static/images/background.png);
-	background-repeat: no-repeat;
+	background-image: linear-gradient(to right,#fbc2eb,a6c1ee);
 	background-attachment: fixed;
 	font-family: Helvetica Neue,
 				 Helvetica,
