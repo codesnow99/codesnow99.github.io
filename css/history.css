@@ -1,0 +1,299 @@
+html, body {
+  display: block;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* all elements in top element 'loading' */
+#loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #9795f0;
+  transition: opacity 1s;
+}
+
+#loading-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -40px;
+  margin-left: -120px;
+
+  width: 200px;
+  height: 30px;
+}
+
+#loading-content>div {
+  float: left;
+  margin-right: 10px;
+
+  display: block;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #fbc8d4;
+}
+
+@keyframes wave {
+  50%,
+  70% {
+    transform: scale(2);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+#loading-content>div::before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  border-radius: inherit;
+}
+
+#loading-content-1::before {
+  animation: wave 1.5s ease-out 0.1s infinite;
+}
+
+#loading-content-2::before {
+  animation: wave 1.5s ease-out 0.4s infinite;
+}
+
+#loading-content-3::before {
+  animation: wave 1.5s ease-out 0.7s infinite;
+}
+
+#loading-content-4::before {
+  animation: wave 1.5s ease-out 1.0s infinite;
+}
+
+#loading-content-5::before {
+  animation: wave 1.5s ease-out 1.3s infinite;
+}
+
+/* 以下内容为适配不具备意义: */
+#container {
+  display: block;
+  width: 100%;
+  min-width: 1400px;
+  background-color: #9795f0;
+}
+
+#content {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 1400px;
+}
+
+/* all elements in top element 'header': */
+header {
+  display: block;
+}
+
+/* all elements intop element 'article': */
+.article {
+  margin: 0px auto 40px;
+
+  display: block;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+  border-radius: 7px;
+  padding: 50px 0px;
+  width: 760px;
+  min-height: 200px;
+  background-color: #ffffff;
+}
+
+.article-time {
+  display: block;
+  cursor: default;
+
+  padding: 5px 70px;
+  height: 30px;
+}
+
+.article-time-img {
+  float: left;
+  display: block;
+  width: 17px;
+  height: 30px;
+
+  background-image: url(https://codesnow99.github.io/images/history_time.png);
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: 0px 8px;
+}
+
+.article-time-txt {
+  float: left;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+
+  font-family: Consolas;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+}
+
+.article-title {
+  display: inline-block;
+  margin: 0px 70px;
+  padding: 0px;
+  max-width: 620px;
+  line-height: 30px;
+  height: 30px;
+
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Microsoft YaHei;
+  font-size: 22px;
+  font-weight: 600;
+  color: #9795f0;
+}
+.article-title:hover {
+  color: #7d7bec;
+}
+
+.article-content {
+  display: block;
+  width: 620px;
+  padding: 10px 70px;
+
+  font-family: Microsoft YaHei;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  letter-spacing: 1px;
+}
+
+footer {
+  display: block;
+}
+
+/* all elements in top element 'nav': */
+nav {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  display: block;
+}
+
+#nav-content {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+  border-radius: 5px;
+  width: 50px;
+  background-color: rgba(255,255,255,0.8);
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#nav-content-history {
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff5a20;
+  background-image: url(https://codesnow99.github.io/images/history_list.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 5px;
+}
+
+#nav-content-aboutme {
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #4a56fc;
+  background-image: url(https://codesnow99.github.io/images/history_me.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 5px;
+}
+
+/* all elements in element 'tools': */
+#tools {
+  position: fixed;
+  z-index: 1;
+  display: block;
+  top: 0px;
+}
+
+#tools-content {
+  display: block;
+  width: 50px;
+  position: absolute;
+  left: 100px;
+  top: 500px;
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,0.8);
+  opacity: 0;
+
+  transition: opacity 1s;
+}
+
+#tools-content-top {
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #9795f0;
+  background-image: url(https://codesnow99.github.io/images/history_top.png);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 6px 6px;
+}
+#tools-content-top:hover {
+  cursor: pointer;
+}
+
+#tools-content-previous {
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff5a20;
+  background-image: url(https://codesnow99.github.io/images/history_previous.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 4px;
+}
+
+#tools-content-next {
+  display: block;
+  margin: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff5a20;
+  background-image: url(https://codesnow99.github.io/images/history_next.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 5px 7px;
+}
