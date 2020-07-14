@@ -24,6 +24,7 @@ window.onresize = function() {
   document.getElementsByTagName('footer')[0].style.height = half_height;
 };
 
+// used by 'window.onload'.
 function fill_in_data() {
 
   // get data from file:
