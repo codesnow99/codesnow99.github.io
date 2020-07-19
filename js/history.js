@@ -24,27 +24,37 @@ window.onresize = function() {
   document.getElementsByTagName('footer')[0].style.height = half_height;
 };
 
-// used by 'window.onload'.
+// used by <window.onload>:
 function fill_in_data() {
 
   // get data from file:
   var xhr = new XMLHttpRequest();
   xhr.timeout = 10000;
   xhr.responseType = "text";
-  xhr.open( 'GET',
-            file_name,
+  xhr.open( "GET",
+            window.location.href.replace(".html", ".json"),
             true );
   xhr.onload = function() { 
-    var data = JSON.parse(xhr.response);
+    var data    = JSON.parse(xhr.response);
+    var article = document.getElementsByClassName("article");
     var time    = document.getElementsByClassName('article-time-txt');
     var title   = document.getElementsByClassName('article-title');
     var content = document.getElementsByClassName('article-content');
-    for (i = 0; i < data.length; i++) {
-      time[i].innerHTML    = data[i].year + '-' + data[i].month + '-' + data[i].day;
-      title[i].innerHTML   = data[i].title;
-      content[i].innerHTML = data[i].introduce;
+    for (i = 0; i < data.article_list.length; i++) {
+      time[i].innerHTML    = data.article_list[i].creation_time;
+      title[i].innerHTML   = data.article_list[i].title;
+      content[i].innerHTML = data.article_list[i].brief_introduction;
     };
+    for (j = data.article_list.length; j < 10; j++) {
+      article[j].display = "none";
+    }
+    if (data.page == 1) {
+      document.getElementById("tools-content-previous").display = "none";
+    }
+    if (data.is_last_page) {
+      document.getElementById("tools-content-next").display = "none";
+    }
   };
   xhr.send();
-  
+
 };
