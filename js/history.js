@@ -46,16 +46,13 @@ function fill_in_data() {
       content[i].innerHTML = data.article_list[i].brief_introduction;
     };
     for (j = data.article_list.length; j < 10; j++) {
-      console.log("article_none");
-      article[j].display = "none";
+      article[j].style.display = "none";
     };
     if (data.page == 1) {
-      console.log("page...");
-      document.getElementById("tools-content-previous").display = "none";
+      document.getElementById("tools-content-previous").style.display = "none";
     };
     if (data.is_last_page) {
-      console.log("is_last_page...");
-      document.getElementById("tools-content-next").display = "none";
+      document.getElementById("tools-content-next").style.display = "none";
     };
   };
   xhr.send();
