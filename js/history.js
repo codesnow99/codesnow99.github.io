@@ -43,8 +43,8 @@ function fill_in_data() {
     for (i = 0; i < data.article_list.length; i++) {
       time[i].innerHTML = data.article_list[i].creation_time;
       title[i].innerHTML = data.article_list[i].title;
-      title[i].href = 'https://codesnow99.github.io/article/' +
-        data.article_list[i].id.toString().zfill(6) + '.html';
+      id = ("00000" + data.article_list[i].id).slice(-6)
+      title[i].href = 'https://codesnow99.github.io/article/' + id + ".html";
       content[i].innerHTML = data.article_list[i].brief_introduction;
     };
     for (j = data.article_list.length; j < 10; j++) {
