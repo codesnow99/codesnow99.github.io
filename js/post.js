@@ -1,4 +1,6 @@
+// @fill_in_data()
 window.onload = function() {
+  fill_in_data()
   var note = document.getElementById("note");
 	var height = note.contentDocument.documentElement.scrollHeight;
 	note.style.height = height + "px";
@@ -10,3 +12,11 @@ window.onload = function() {
     document.getElementById('loading').style.display = 'none';
   }, 900 );
 }
+
+// be relied by:
+// @window.onload()
+function fill_in_data() {
+  // https://codesnow99.github.io/article/000000.html
+  // https://codesnow99.github.io/post/000000.html
+  document.getElementById("note").src = window.location.href.replace("article", "post");
+};
