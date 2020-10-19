@@ -2,8 +2,9 @@
 window.onload = function() {
   fill_in_data()
   var note = document.getElementById("note");
-	var height = note.contentDocument.documentElement.scrollHeight;
-	note.style.height = height + "px";
+  note.onload = function() {
+    note.style.height = note.contentDocument.documentElement.scrollHeight; + "px";
+  }
   document.getElementById('loading-content').style.display = 'none';
   window.setTimeout( function() {
     document.getElementById('loading').style.opacity = '0';
