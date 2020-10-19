@@ -1,10 +1,10 @@
 // @fill_in_data()
 window.onload = function() {
-  fill_in_data()
   var note = document.getElementById("note");
   note.onload = function() {
     note.style.height = note.contentDocument.documentElement.scrollHeight; + "px";
   }
+  fill_in_data()
   document.getElementById('loading-content').style.display = 'none';
   window.setTimeout( function() {
     document.getElementById('loading').style.opacity = '0';
