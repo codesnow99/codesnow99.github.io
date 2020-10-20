@@ -2,7 +2,7 @@
 window.onload = function() {
   var note = document.getElementById("note");
   note.onload = function() {
-    note.style.height = note.contentDocument.documentElement.scrollHeight; + "px";
+    note.style.height = note.contentDocument.documentElement.scrollHeight + "px";
   }
   fill_in_data()
   document.getElementById('loading-content').style.display = 'none';
