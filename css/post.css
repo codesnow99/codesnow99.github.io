@@ -75,6 +75,7 @@ html, body {
   margin: 0 auto;
   width: 1400px;
   min-height: 100%;
+  overflow: hidden;
 }
 
 #content-adaptation {
