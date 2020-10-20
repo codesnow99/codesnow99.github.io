@@ -1,6 +1,6 @@
 // @fill_in_data()
 window.onload = function() {
-  var note = document.getElementById("note");
+  var note = document.getElementById("content-adaptation-note");
   note.onload = function() {
     note.style.height = note.contentDocument.documentElement.scrollHeight + "px";
   }
@@ -19,5 +19,5 @@ window.onload = function() {
 function fill_in_data() {
   // https://codesnow99.github.io/article/000000.html
   // https://codesnow99.github.io/post/000000.html
-  document.getElementById("note").src = window.location.href.replace("article", "post");
+  document.getElementById("content-adaptation-note").src = window.location.href.replace("article", "post");
 };
