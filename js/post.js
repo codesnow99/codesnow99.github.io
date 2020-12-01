@@ -17,7 +17,7 @@ window.onload = function() {
 // be relied by:
 // @window.onload()
 function fill_in_data() {
-  // https://codesnow99.github.io/article/000000.html
-  // https://codesnow99.github.io/post/000000.html
+  // https://marsno.github.io/article/000000.html
+  // https://marsno.github.io/post/000000.html
   document.getElementById("content-adaptation-note").src = window.location.href.replace("article", "post");
 };

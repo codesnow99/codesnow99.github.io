@@ -44,7 +44,7 @@ function fill_in_data() {
       time[i].innerHTML = data.article_list[i].creation_time;
       title[i].innerHTML = data.article_list[i].title;
       id = ("00000" + data.article_list[i].id).slice(-6)
-      title[i].href = 'https://codesnow99.github.io/article/' + id + ".html";
+      title[i].href = 'https://marsno.github.io/article/' + id + ".html";
       content[i].innerHTML = data.article_list[i].brief_introduction;
     };
     for (j = data.article_list.length; j < 10; j++) {
